@@ -20,20 +20,20 @@ async def get_random_question(session: AsyncSession = Depends(get_async_session)
 
 @router.post('/question')
 async def post_new_question(question: Question_schema, session: AsyncSession = Depends(get_async_session)):
-    stmt = insert(Question).values(**question.dict())
+    stmt = insert(Question).values(**question.model_dump())
     await session.execute(stmt)
     await session.commit()
-    return {"status": "success"}
+    return {"status": "succes"}
 
-@router.delete('/question')
+@router.delete('/question/{question_id}')
 async def delete_question(question_id: int, session: AsyncSession = Depends(get_async_session)):
     stmt = delete(Question).where(Question.id == question_id)
     await session.execute(stmt)
     await session.commit()
-    return {"status": "success"}
+    return {"status": "succes"}
 
-@router.put('/question')
-async def change_question(question: Question_schema, question_id: int, session: AsyncSession = Depends(get_async_session)):
+@router.put('/question/{question_id}')
+async def change_question(question_id: int, question: Question_schema,  session: AsyncSession = Depends(get_async_session)):
 
     query = select(Question).where(Question.id == question_id)
     result = await session.execute(query)
@@ -45,4 +45,4 @@ async def change_question(question: Question_schema, question_id: int, session: 
         question_db.answer = question.answer
         question_db.additional_material = question.additional_material
         await session.commit()
-        return {"status": "success"}
+        return {"status": "succes"}

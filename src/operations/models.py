@@ -1,9 +1,8 @@
 from datetime import datetime
-
+from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import TIMESTAMP, Column, Integer, String
-from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
-
-Base: DeclarativeMeta = declarative_base()
+class Base(DeclarativeBase):
+    pass
 
 
 class Question(Base):
