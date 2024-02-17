@@ -1,0 +1,19 @@
+.screen {
+  width: 920px;
+  height: 529.98px;
+
+  filter: drop-shadow(0px 0px 6.2px rgba(0, 0, 0, 0.2));
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 145.9px -85px rgba(0, 0, 0, 0.63);
+  border-radius: 47px;
+
+  display: flex;
+  justify-content: center; /*Центрирование по горизонтали*/
+  align-items: center; /*Центрирование по вертикали */
+  cursor: pointer;
+}
+
+.text {
+  margin: 0px 20px;
+}

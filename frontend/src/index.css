@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+  font-style: italic;
+}
+
+.main {
+  margin: 0;
+  font-family: Montserrat;
+  font-style: italic;
+  background: #bdf4c3;
+  width: 1920px;
+  height: 932px;
+}
+
+.container {
+  width: 1060px;
+  margin: 0 auto; /*позиционирование по центру*/
+  padding-top: 10px;
+}
+
+.window {
+  padding-top: 39.94px;
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1060px;
+  height: 722px;
+
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 37.6px rgba(0, 0, 0, 0.31);
+  border-radius: 43px;
+}
+
+.question:hover {
+  background-color: rgb(217, 221, 143);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 48.08px 70px 0px;
+}
+
+.question {
+  font-size: 64px;
+  margin: 0 auto; /*позиционирование по центру*/
+  width: 920px;
+  height: 529.98px;
+  filter: drop-shadow(0px 0px 6.2px rgba(0, 0, 0, 0.2));
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 145.9px -85px rgba(0, 0, 0, 0.63);
+  border-radius: 47px;
+  display: flex;
+  justify-content: center; /*Центрирование по горизонтали*/
+  align-items: center; /*Центрирование по вертикали */
+  cursor: pointer;
+}
+
+.answer {
+  font-size: 30px;
+  margin: 0 auto;
+  width: 920px;
+  height: 529.98px;
+
+  filter: drop-shadow(0px 0px 6.2px rgba(0, 0, 0, 0.2));
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 145.9px -85px rgba(0, 0, 0, 0.63);
+  border-radius: 47px;
+
+  display: flex;
+  justify-content: center; /*Центрирование по горизонтали*/
+  align-items: center; /*Центрирование по вертикали */
+  cursor: pointer;
+}
+
+.logo {
+  margin-bottom: 15px;
+}
+
+/* @media (max-width: 1000px) {
+  .window {
+    background-color: rgb(93, 136, 255);
+    width: 80vw;
+    border: 6px black solid;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 560px;
+    height: 300px;
+  }
+} */

@@ -7,13 +7,13 @@ services:
     expose:
       - 1221
     env_file:
-      - .env-non-dev
+      - ./api/.env-non-dev
     volumes:
       - python-interview_postgres:/var/lib/postgresql/data
 
   app:
     build:
-      context: .
+      context: ./api
     env_file:
       - .env-non-dev
     container_name: fastapi_app
@@ -22,6 +22,12 @@ services:
       - 9999:8000
     depends_on:
       - db
+  
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+ 
 volumes:
   python-interview_postgres:
     external: true
