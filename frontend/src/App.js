@@ -12,7 +12,7 @@ const App = ({ className, onClick, value }) => {
   const [state, setState] = useState("question");
 
   const click_next_question = () => {
-    fetch("http://45.9.40.200:7777/question")
+    fetch("http://45.9.40.200:9999/question")
       .then((response) => response.json())
       .then((json) => {
         console.log(json.question);
