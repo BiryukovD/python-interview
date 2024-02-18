@@ -28,7 +28,7 @@ services:
       context: ./frontend
     container_name: frontend
     ports:
-      - 7777:80  
+      - 80:80  
     depends_on:
       - app
       - db 

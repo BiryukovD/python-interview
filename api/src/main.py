@@ -15,6 +15,7 @@ app.include_router(router_app)
 
 origins = [
     "http://45.9.40.200:7777",
+    "http://python-interview.ru"
 ]
 
 app.add_middleware(
