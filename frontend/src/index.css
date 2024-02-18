@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: Montserrat;
   font-style: italic;
+  background: red;
   width: 1920px;
   height: 932px;
 }
